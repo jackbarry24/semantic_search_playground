@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Semantic Search Playground</h1>
+        <div id="loadingMessage" style="display: none;">Loading model, please wait...</div>
+        
+        <div id="initContainer">
+            <input type="file" id="fileInput" multiple accept=".txt">
+            <div id="inputContainer">
+                
+                <div id="chunkingMethod">
+                    <h5 id="chunkingLabel">Chunking Method</h5>
+                    <label><input type="radio" name="chunkingMethod" value="sentence" checked> Sentence-wise </label>
+                    <label><input type="radio" name="chunkingMethod" value="newline"> Newline-wise </label>
+                    <label><input type="radio" name="chunkingMethod" value="fixedSize"> Fixed Size </label>
+                </div>
+                <button id="preprocessButton" disabled>Preprocess</button>
+            </div>
+    
+            <div class="progressContainer" id="progressContainer" style="display: none;">
+                <div class="progressBar" id="progressBar"></div>
+                <div id="progressText"></div>
+            </div>
+        </div>
+        
+        <textarea id="query" placeholder="Enter your query here..."></textarea>
+        <input type="number" id="k" placeholder="Number of results" min="1">
+        
+        <div id="similarityContainer">
+            <h5 id="similarityLabel">Similarity Function</h5>
+            <label><input type="radio" name="similarityMethod" value="cosine" checked> Cosine Similarity</label>
+            <label><input type="radio" name="similarityMethod" value="euclidean"> Euclidean Distance</label>
+        </div>
+        
+        <button id="searchButton" disabled>Search</button>
+        
+
+        <div id="results"></div>
+
+        
+        <div id="ackContainer">
+            <p>This app demonstrates an extremely simple semantic search approach using the universal sentence encoder.</p>
+            <p>Still, this simple paradigm is the backbone of many RAG based LLM applications.</p>
+            <a href="https://github.com/jackbarry24" target="_blank">Jack Barry</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

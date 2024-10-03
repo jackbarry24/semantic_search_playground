@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+#initContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+#chunkingMethod {
+    margin-bottom: 20px; 
+}
+
+#chunkingLabel {
+    margin-bottom: 0px;
+}
+
+#preprocessButton {
+    background-color: #007bffb2;
+}
+
+#preprocessButton:hover {
+    background-color: #007bff82
+}
+
+#preprocessButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.progressContainer {
+    width: 100%;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.progressBar {
+    width: 0;
+    margin-top: 2px;
+    height: 20px;
+    background-color: #acacac;
+    border-radius: 5px;
+}
+
+#progressText {
+    margin-top: 2px;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}
+
+#loadingMessage {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#similarityContainer {
+    margin-bottom: 20px;
+}
+
+#similarityLabel {
+    margin-bottom: 0px;
+}
+
+
+input[type="number"],
+button,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 0px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+button {
+    background-color: #4caf4fc3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+button:hover {
+    background-color: #4caf4f83;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.ackContainer {
+    margin-top: 20px;
+}
+
+p {
+    font-size: 10px;
+    color:#555;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+a {
+    font-size: 10px;
+    color:#555;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+
